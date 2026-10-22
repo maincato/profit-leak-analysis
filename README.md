@@ -2,32 +2,75 @@
 
 ## Project Overview
 
-This project analyses a company's sales, profit, discounts, customers, products and returns to identify why profit margin is decreasing despite revenue growth.
+An end-to-end data analytics project using **Excel, MySQL and Power BI** to investigate profitability issues in the Global Superstore dataset.
 
-The goal is to simulate a real business analytics workflow using Excel, SQL and Power BI.
+The objective is to identify underperforming products, evaluate the relationship between discounts and profitability, and provide data-driven business recommendations.
 
 ## Business Problem
 
-The company has noticed that total sales are growing, but profit margins are decreasing. Management wants to understand which products, regions, customer segments or discount strategies are causing the loss in profitability.
+Between 2014 and 2017, the company experienced consistent revenue growth. However, its overall profit margin declined from 11.95% in 2016 to 11.73% in 2017.
+
+The goal is to understand which products, regions and commercial practices contribute to weak profitability.
 
 ## Tools Used
 
-- Excel: initial data cleaning, pivot tables and exploratory analysis
-- SQL: data modelling, joins, aggregations and business queries
-- Power BI: dashboard creation, DAX measures and business storytelling
+- **Excel:** Exploratory data analysis, pivot tables and initial business insights.
+- **MySQL:** Data cleaning, validation, joins, aggregations, CTEs and window functions.
+- **Power BI:** Interactive dashboards, DAX measures and business performance visualization.
 
-## Key Questions
+## Key Findings
 
-1. Which product categories generate the most sales?
-2. Which categories generate the most profit?
-3. Which products have high sales but low profit?
-4. Which regions have weak profit margins?
-5. Are discounts reducing profitability?
-6. Are returns concentrated in specific categories or regions?
+| Metric | Result |
+|---|---|
+| Total Sales | 12.64M |
+| Total Profit | 1.47M |
+| Overall Profit Margin | 11.61% |
+| Furniture Profit Margin | 6.94% |
+| Tables Profit Margin | -8.46% |
+| Tables Average Discount | 29.07% |
 
-## Final Deliverables
+### Profitability Analysis
 
-- Cleaned Excel analysis file
-- SQL scripts for creating and analysing the database
-- Interactive Power BI dashboard
-- Business recommendations based on the analysis
+Furniture is the least profitable category. Within Furniture, Tables generated approximately 757K in sales but recorded a loss of 64K.
+
+### Discount Analysis
+
+Tables with discounts above 40% recorded a profit margin of -76.73%, compared with +23.09% for Tables sold without discounts.
+
+### Regional Analysis
+
+The largest absolute losses from Tables were concentrated in Southeastern Asia, Western Europe and South America.
+
+### Returns Analysis
+
+Furniture had the highest proportion of orders associated with returns (10.17%), closely followed by Technology (10.07%).
+
+## Business Recommendations
+
+1. Review high-discount sales of Tables, particularly those exceeding 20%.
+2. Prioritize profitability reviews in regions with the largest losses.
+3. Investigate product pricing, costs and discount policies before implementing changes.
+4. Monitor profit margins and order-level return indicators alongside revenue growth.
+
+These recommendations are based on observed relationships, not proven causal effects.
+
+## Project Structure
+
+```text
+profit-leak-analysis/
+├── data/
+├── excel/
+├── sql/
+├── powerbi/
+├── images/
+├── insights/
+└── README.md
+```
+
+## Project Deliverables
+
+- **Excel:** Exploratory analysis and profitability insights — Completed.
+- **SQL:** Data preparation, validation and business analysis — Completed.
+- **Power BI:** Interactive dashboard and business storytelling — In progress.
+
+The analysis uses the Global Superstore dataset, and results should be interpreted within the limitations of this historical dataset.
