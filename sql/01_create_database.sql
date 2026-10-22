@@ -1,4 +1,3 @@
--- Profit Leak Analysis
 -- Step 1: Create and select the database
 
 CREATE DATABASE IF NOT EXISTS profit_leak_analysis;

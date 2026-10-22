@@ -1,4 +1,3 @@
--- Profit Leak Analysis
 -- Step 2: Create raw tables for the Global Superstore dataset
 -- All columns are initially stored as text to preserve the source data.
 
