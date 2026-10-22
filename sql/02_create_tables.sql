@@ -1,14 +1,14 @@
+-- Profit Leak Analysis
+-- Step 2: Create raw tables for the Global Superstore dataset
+-- All columns are initially stored as text to preserve the source data.
+
 USE profit_leak_analysis;
 
-DROP TABLE IF EXISTS orders_raw;
-DROP TABLE IF EXISTS returns_raw;
-DROP TABLE IF EXISTS people_raw;
-
-CREATE TABLE orders_raw (
+CREATE TABLE IF NOT EXISTS orders_raw (
     row_id VARCHAR(20),
     order_id VARCHAR(50),
-    order_date VARCHAR(20),
-    ship_date VARCHAR(20),
+    order_date VARCHAR(30),
+    ship_date VARCHAR(30),
     ship_mode VARCHAR(50),
     customer_id VARCHAR(50),
     customer_name VARCHAR(100),
@@ -20,7 +20,7 @@ CREATE TABLE orders_raw (
     region VARCHAR(100),
     market VARCHAR(100),
     product_id VARCHAR(50),
-    product_name VARCHAR(255),
+    product_name TEXT,
     sub_category VARCHAR(50),
     category VARCHAR(50),
     sales VARCHAR(50),
@@ -31,13 +31,13 @@ CREATE TABLE orders_raw (
     order_priority VARCHAR(50)
 );
 
-CREATE TABLE returns_raw (
+CREATE TABLE IF NOT EXISTS returns_raw (
     returned VARCHAR(10),
     order_id VARCHAR(50),
     region VARCHAR(100)
 );
 
-CREATE TABLE people_raw (
+CREATE TABLE IF NOT EXISTS people_raw (
     person VARCHAR(100),
     region VARCHAR(100)
 );
