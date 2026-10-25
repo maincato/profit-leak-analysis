@@ -35,11 +35,6 @@ The largest absolute losses from Tables occurred in:
 
 Southern Europe recorded the highest average discount on Tables (53.16%).
 
-### 4. Returns require additional investigation
-
-Furniture recorded the highest rate of orders associated with returns (10.17%), followed closely by Technology (10.07%).
-
-The dataset does not establish the financial cost of individual returns.
 
 ## Business Recommendations
 
@@ -52,10 +47,3 @@ The dataset does not establish the financial cost of individual returns.
 4. **Monitor profitability alongside revenue:** Track sales, profit margin, discount levels and return indicators regularly rather than focusing exclusively on revenue growth.
 
 5. **Test potential improvements:** Evaluate pricing and discount changes through controlled pilots before implementing company-wide policies.
-
-## Limitations
-
-- The analysis uses historical Global Superstore data from 2014–2017.
-- Relationships between discounts and losses do not establish causality.
-- Return indicators operate at order level, not individual product-return level.
-- Recommendations require additional validation before implementation.
