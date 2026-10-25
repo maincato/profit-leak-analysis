@@ -2,8 +2,11 @@
 
 USE profit_leak_analysis;
 
+DROP TABLE IF EXISTS orders_clean;
+DROP TABLE IF EXISTS returns_clean;
+
 -- Clean Orders
-CREATE TABLE IF NOT EXISTS orders_clean AS
+CREATE TABLE orders_clean AS
 SELECT
     CAST(row_id AS UNSIGNED) AS row_id,
     order_id,
@@ -32,7 +35,7 @@ SELECT
 FROM orders_raw;
 
 -- Clean Returns
-CREATE TABLE IF NOT EXISTS returns_clean AS
+CREATE TABLE returns_clean AS
 SELECT DISTINCT
     order_id,
     returned,
